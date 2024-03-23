@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  containerappdemotest:
+    image: ${DOCKER_REGISTRY-}containerappdemotest
+    build:
+      context: .
+      dockerfile: ContainerAppDemoTest/Dockerfile
+    environment:
+      - REDIS_HOST=redis # optional, in case the service will be called something else
+    depends_on:
+      - redis
+
+  redis: # service name / DNS name
+    image: redis:latest # this is tag in DockerHub
+    ports:
+      - "6379:6379" # default redis port
