@@ -3,6 +3,8 @@
 Code for the demo:
 
 "Intro: C# + Containers + Azure"
+
+dockerhub: https://hub.docker.com/repository/docker/eduardsvavere/containerappdemotest/general
  
 Create your first C# container app and run it on Azure.
  
